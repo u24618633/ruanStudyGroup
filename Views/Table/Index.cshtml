@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<tr>
+    <th> @Html.DisplayNameFor(model => TableClass.StudentID) </th>
+    <th> @Html.DisplayNameFor(model => table.FirstName) </th>
+    <th> @Html.DisplayNameFor(model => table.Surname) </th>
+    <th> @Html.DisplayNameFor(model => table.EmailAdress) </th>
+</tr>
+
+@foreach (var item in Model) //Each student
+{ 
+    <tr>
+        <td>@Html.DisplayFor(modelItem => item.StudentID) </td>
+        <td>@Html.DisplayFor(modelItem => item.FirstName) </td>
+        <td>@Html.DisplayFor(modelItem => item.Surname) </td>
+        <td>@Html.DisplayFor(modelItem => item.EmailAdress) </td>
+
+
+    </tr>
+}
